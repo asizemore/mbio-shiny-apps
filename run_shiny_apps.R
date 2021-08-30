@@ -1,7 +1,9 @@
 ## Running app locally
+
+# Sets the working directory
 setwd("~/Documents")
 
-library(shiny)
+# Source the functions we need to run the shiny apps
 source("shiny/apps/app_functions.R")
 
 
