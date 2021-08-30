@@ -75,9 +75,9 @@ shinyServer(function(input, output, session) {
     # If df_abundance is null, load in data and populate dropdowns
     if(is.null(df_abundance)){
       mstudy_obj <<- import.eupath(
-        taxa_abundance_path = '~/Documents/data/TaxaRelativeAbundance.txt',
-        sample_path = '~/Documents/data/Characteristics.txt',
-        datasets_path = '~/Documents/data/Datasets.txt',
+        taxa_abundance_path = .taxa_abundance_path,
+        sample_path = .sample_path,
+        datasets_path = .datasets_path,
       )
 
       df_abundance <<- as.data.frame(mstudy_obj$otu_table$otu_dt)
