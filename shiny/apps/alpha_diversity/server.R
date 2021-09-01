@@ -63,9 +63,9 @@ shinyServer(function(input, output, session) {
     if(is.null(mstudy_obj)){
       
       mstudy_obj <<- import.eupath(
-        taxa_abundance_path = '~/Documents/data/TaxaRelativeAbundance.txt',
-        sample_path = '~/Documents/data/Characteristics.txt',
-        datasets_path = '~/Documents/data/Datasets.txt',
+        taxa_abundance_path = .taxa_abundance_path,
+        sample_path = .sample_path,
+        datasets_path = .datasets_path,
         aggregate_by = "Species",
         use_relative_abundance = F
       )
